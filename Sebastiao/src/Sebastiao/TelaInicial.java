@@ -69,7 +69,7 @@ public class TelaInicial extends JFrame {
 		lblCadastros.setFont(new Font("Arial Black", Font.BOLD | Font.ITALIC, 14));
 		lblCadastros.setBounds(460, 189, 131, 14);
 		contentPane.add(lblCadastros);
-		
+		//
 		JButton btnMembros = new JButton("");
 		btnMembros.setIcon(new ImageIcon(TelaInicial.class.getResource("/Fotos/membro.jpg")));
 		btnMembros.addActionListener(new ActionListener() {
