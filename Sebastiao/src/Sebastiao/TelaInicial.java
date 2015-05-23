@@ -128,7 +128,7 @@ public class TelaInicial extends JFrame {
 		lblFamlias.setBounds(625, 189, 131, 14);
 		contentPane.add(lblFamlias);
 		
-		
+		System.out.println("sjdvsjdvkjsbvkjsbvksbvksbvksbvks");
 	
 	}
 }
