@@ -19,7 +19,7 @@ import java.text.ParseException;
 import javax.swing.ImageIcon;
 
 
-//wwwwwwwwwwwwwwwwwwwwwwwwwww
+//wwwwwwwwwwwwwwww
 
 @SuppressWarnings("serial")
 public class TelaInicial extends JFrame {
