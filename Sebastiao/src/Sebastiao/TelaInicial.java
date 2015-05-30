@@ -19,31 +19,28 @@ import java.text.ParseException;
 import javax.swing.ImageIcon;
 
 
-//wwwwwwwwwwwwwwwwwdqwwq
+
 
 @SuppressWarnings("serial")
 public class TelaInicial extends JFrame {
 
 	private JPanel contentPane;
 	/**
-	 * @author Miguel Wolfgrann, Narciso , Renan e Hermilaiane
-	 * 
+	 * @author Miguel Wolfgrann
 	 */
-	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 		
 		        
 			public void run() {
 				try {
-				  //!!!!!!!!
+				  
 					UIManager.setLookAndFeel(new NimbusLookAndFeel());
 					TelaInicial frame = new TelaInicial();					
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
-				
 			}
 		});
 	}
@@ -72,7 +69,7 @@ public class TelaInicial extends JFrame {
 		lblCadastros.setFont(new Font("Arial Black", Font.BOLD | Font.ITALIC, 14));
 		lblCadastros.setBounds(460, 189, 131, 14);
 		contentPane.add(lblCadastros);
-		//
+		
 		JButton btnMembros = new JButton("");
 		btnMembros.setIcon(new ImageIcon(TelaInicial.class.getResource("/Fotos/membro.jpg")));
 		btnMembros.addActionListener(new ActionListener() {
@@ -90,7 +87,6 @@ public class TelaInicial extends JFrame {
 					
 					e.printStackTrace();
 				}
-				
 				
 			}
 		});
@@ -131,7 +127,7 @@ public class TelaInicial extends JFrame {
 		lblFamlias.setBounds(625, 189, 131, 14);
 		contentPane.add(lblFamlias);
 		
-		System.out.println("sjdvsjdvkjsbvkjsbvksbvksbvksbvks");
+		
 	
 	}
 }

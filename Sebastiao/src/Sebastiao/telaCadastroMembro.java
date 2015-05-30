@@ -1,63 +1,49 @@
 package Sebastiao;
 
-
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.plaf.nimbus.NimbusLookAndFeel;
-import javax.swing.text.MaskFormatter;
-import javax.swing.DefaultComboBoxModel;
-import javax.swing.JButton;
-import javax.swing.JFormattedTextField;
-import javax.swing.JOptionPane;
-import javax.swing.JTextArea;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
-import javax.swing.UnsupportedLookAndFeelException;
+import iINTERFACE.Interface;
 
 import java.awt.Color;
-
-import javax.swing.UIManager;
-
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 import java.awt.Font;
-import java.awt.ScrollPane;
-import java.awt.SystemColor;
-import java.awt.Label;
-import java.awt.Canvas;
-import java.awt.Panel;
-import java.awt.TextField;
 import java.awt.TextArea;
-
-import javax.swing.JRadioButton;
-import javax.swing.JComboBox;
-
-import java.awt.Button;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
-import java.util.logging.Logger;
 
-import javax.swing.JScrollPane;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
+import javax.swing.JFormattedTextField;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.JTextPane;
 import javax.swing.SwingConstants;
-import javax.swing.JTable;
+import javax.swing.border.EmptyBorder;
+import javax.swing.text.MaskFormatter;
 
-
-import javax.swing.JCheckBox;
-
-
-
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+/*import BuscasComboBOX.BGeral;
+import ConexaoBD.Conexao;
+import ENTITY.Endereco;
+import ENTITY.Membro;
+import ENTITY.Pessoa;
+import ENTITY.Profissao;
+import ENTITY.Util;
+//import iINTERFACE.Interface;
+import DAO.ConsultaCidadeDAO;
+ import DAO.ConsultaComunidadeDAO;
+ import DAO.ConsultaEstadoDAO;
+ import DAO.ConsultaInstrucaoDAO;
+ import DAO.ConsultaParoquiaDAO;
+ import DAO.ConsultaProfissaoDAO;
+ import DAO.ConsultaSetorDAO;*/
 
 public class telaCadastroMembro extends JFrame {
 	/**
@@ -119,7 +105,9 @@ public class telaCadastroMembro extends JFrame {
 		MaskFormatter MaskCpf = new MaskFormatter("  ###.###.###-##");
 		MaskFormatter MaskRg = new MaskFormatter("  #.###.###");
 		MaskFormatter MaskCep = new MaskFormatter("  #####-###");
-		
+		//MembroAcessoDados pessoa = new MembroAcessoDados();
+	    //BGeral buscar = new BGeral();
+		//java.sql.Connection c = new Conexao().abrirConexao();
 		setTitle("MEMBROS");
 		setBounds(90, 40, 1203, 732);
 
@@ -401,50 +389,50 @@ public class telaCadastroMembro extends JFrame {
 		bairroField.setColumns(10);
 
 		profissaoCBox = new JComboBox<String>();
-		
+		//buscar.buscaProfissao(profissaoCBox);
 		profissaoCBox.setFont(new Font("Dialog", Font.PLAIN, 16));
 		profissaoCBox.setBounds(679, 147, 237, 31);
 		contentPane.add(profissaoCBox);
 
 		ufCBox = new JComboBox<String>();
-		
+		//buscar.buscaUF(ufCBox);
 		ufCBox.setFont(ufCBox.getFont().deriveFont(ufCBox.getFont().getSize() + 4f));
-		ufCBox.setBounds(30, 372, 57, 31);
+		ufCBox.setBounds(30, 372, 67, 31);
 		contentPane.add(ufCBox);
 
 		setorCBox = new JComboBox<String>();
-		
+		//buscar.buscaSetor(setorCBox);
 		setorCBox.setFont(new Font("Dialog", Font.PLAIN, 16));
 		setorCBox.setBounds(460, 493, 179, 31);
 		contentPane.add(setorCBox);
 
 		comunidadeCBox = new JComboBox<String>();
-		
+		//buscar.buscaComunidade(comunidadeCBox);
 		comunidadeCBox.setFont(new Font("Dialog", Font.PLAIN, 16));
 		comunidadeCBox.setBounds(460, 441, 179, 31);
 		contentPane.add(comunidadeCBox);
 		
 		cidadeCBox = new JComboBox<String>();
-		
+		//buscar.buscaCidade(cidadeCBox);
 		cidadeCBox.setFont(new Font("Dialog", Font.PLAIN, 16));
 		cidadeCBox.setBounds(99, 372, 224, 31);
 		contentPane.add(cidadeCBox);
 
 		InstrucaoEscCBox = new JComboBox<String>();
 		InstrucaoEscCBox.setMaximumRowCount(10);
-		
+		//buscar.buscaInstrucao(InstrucaoEscCBox);
 		InstrucaoEscCBox.setFont(new Font("Dialog", Font.PLAIN, 12));
 		InstrucaoEscCBox.setBounds(679, 201, 237, 31);
 		contentPane.add(InstrucaoEscCBox);
 
 		paroquiaCBox = new JComboBox<String>();
-		
+		//buscar.buscaParoquia(paroquiaCBox);
 		paroquiaCBox.setFont(new Font("Dialog", Font.PLAIN, 16));
 		paroquiaCBox.setBounds(460, 377, 179, 31);
 		contentPane.add(paroquiaCBox);
 		
 		estadoCivilCBox = new JComboBox<String>();
-		
+		//buscar.buscaEstadoCivil(estadoCivilCBox);
 		estadoCivilCBox.setFont(new Font("Dialog", Font.PLAIN, 16));
 		estadoCivilCBox.setBounds(460, 544, 179, 31);
 		contentPane.add(estadoCivilCBox);
@@ -526,7 +514,9 @@ public class telaCadastroMembro extends JFrame {
 		lblTelefone.setFont(new Font("SansSerif", Font.PLAIN, 14));
 		lblTelefone.setBounds(680, 533, 122, 16);
 		contentPane.add(lblTelefone);
+		
 	}
+	
 	
 }
 	  
