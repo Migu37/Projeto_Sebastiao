@@ -10,7 +10,6 @@ import ConexaoBD.Conexao;
 public  class MembroAcessoDados implements Interface{
 	
 	@SuppressWarnings("resource")
-	@Override
 	public void salvar(Pessoa membro) {
 		Connection conexao = new Conexao().abrirConexao();
 		ResultSet rs = null;				
